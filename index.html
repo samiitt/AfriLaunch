@@ -1,1 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfriLaunch — Join the Waitlist</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzNiI+CjxyZWN0IHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgcng9IjkiIGZpbGw9IiMxQTU2RkYiLz4KPHBhdGggZD0iTTExIDkgQzkgOSA3IDEwLjUgNi41IDEyLjUgQzYgMTQuNSA3IDE2IDYuNSAxOCBDNiAyMCA1IDIxIDUgMjMgQzUgMjYgNyAyOC41IDEwIDMwIEMxMiAzMSAxNCAzMS41IDE2IDMxLjUgQzE4IDMxLjUgMjAgMzEgMjIgMzAgQzI0IDI4LjUgMjYgMjYuNSAyNiAyNCBDMjYgMjIgMjUgMjAuNSAyNC41IDE5IEMyNCAxNy41IDI0LjUgMTYgMjQgMTQgQzIzLjUgMTIgMjIgMTAuNSAyMC41IDkuNSBDMTkgOC41IDE4IDguNSAxNiA4LjUgQzE0IDguNSAxMi41IDkgMTEgOVoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjE1Ii8+CjxsaW5lIHgxPSIxOCIgeTE9IjI4IiB4Mj0iMTgiIHkyPSIxMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBvbHlsaW5lIHBvaW50cz0iMTMsMTcgMTgsMTEgMjMsMTciIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxjaXJjbGUgY3g9IjE4IiBjeT0iMjgiIHI9IjIuNSIgZmlsbD0id2hpdGUiLz4KPC9zdmc+">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #080808;
+  --white: #FFFFFF;
+  --off-white: #F7F7F5;
+  --grey-2: #E2E2DF;
+  --grey-3: #A0A09C;
+  --grey-4: #5A5A56;
+  --green: #0EA55A;
+  --green-light: rgba(14,165,90,0.08);
+  --blue: #1A56FF;
+  --blue-dark: #1344D4;
+  --blue-light: rgba(26,86,255,0.08);
+  --red: #FF3B30;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { height: 100%; }
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--grey-2);
+  flex-shrink: 0;
+}
+.nav-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1px solid rgba(26,86,255,0.15);
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+.blink {
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: blink 1.2s infinite;
+  flex-shrink: 0;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+.container {
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.left h1 {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.left h1 .blue { color: var(--blue); }
+.left h1 .green { color: var(--green); }
+.desc-1 {
+  font-size: 16px;
+  color: var(--grey-4);
+  line-height: 1.7;
+  font-weight: 400;
+}
+.desc-1 strong { color: var(--black); font-weight: 600; }
+.desc-2 {
+  font-size: 15px;
+  color: var(--grey-4);
+  font-weight: 400;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
+  border-left: 2px solid var(--grey-2);
+  padding-left: 20px;
+}
+.point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--grey-4);
+  font-weight: 400;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--grey-2);
+}
+.point:last-child { border-bottom: none; }
+.point-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+  flex-shrink: 0;
+  min-width: 20px;
+}
+.counter-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 12px 16px;
+  background: var(--off-white);
+  border: 1px solid var(--grey-2);
+  border-radius: 10px;
+}
+.counter-avatars { display: flex; }
+.c-avatar {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-left: -4px;
+  flex-shrink: 0;
+}
+.c-avatar:first-child { margin-left: 0; }
+.counter-txt { font-size: 13px; color: var(--grey-4); font-weight: 400; }
+.counter-txt strong { color: var(--black); font-weight: 700; }
+.right {
+  background: var(--off-white);
+  border: 1.5px solid var(--grey-2);
+  border-radius: 20px;
+  padding: 40px;
+}
+.form-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+.form-sub {
+  font-size: 14px;
+  color: var(--grey-3);
+  font-weight: 400;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.form-stack { display: flex; flex-direction: column; gap: 12px; }
+.input-wrap { display: flex; flex-direction: column; gap: 6px; }
+.input-label { font-size: 12px; font-weight: 600; color: var(--grey-4); letter-spacing: 0.3px; }
+.wl-input {
+  width: 100%;
+  background: var(--white);
+  border: 1.5px solid var(--grey-2);
+  color: var(--black);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 13px 16px;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.wl-input::placeholder { color: var(--grey-3); }
+.wl-input:focus { border-color: var(--blue); }
+.wl-input.error { border-color: var(--red); }
+.error-msg {
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 500;
+  display: none;
+  margin-top: -2px;
+}
+.error-msg.show { display: block; }
+.role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.role-pill {
+  background: var(--white);
+  border: 1.5px solid var(--grey-2);
+  color: var(--grey-4);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+  user-select: none;
+}
+.role-pill.active { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+.btn-submit {
+  width: 100%;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  margin-top: 4px;
+}
+.btn-submit:hover { background: var(--blue-dark); box-shadow: 0 8px 24px rgba(26,86,255,0.25); }
+.btn-submit:active { transform: scale(0.99); }
+.btn-submit:disabled { background: var(--grey-3); cursor: not-allowed; box-shadow: none; transform: none; }
+.form-note { font-size: 12px; color: var(--grey-3); text-align: center; font-weight: 400; }
+#already-box { display: none; animation: fadeUp 0.4s ease both; }
+.already-inner {
+  background: var(--blue-light);
+  border: 1.5px solid rgba(26,86,255,0.2);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+}
+.already-inner h3 { font-size: 18px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.already-inner p { font-size: 14px; color: var(--grey-4); font-weight: 400; line-height: 1.6; }
+#wl-success { display: none; animation: fadeUp 0.4s ease both; }
+.success-inner { text-align: center; }
+.success-check {
+  width: 56px; height: 56px;
+  background: var(--green-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: 2px solid rgba(14,165,90,0.25);
+}
+.success-check svg { width: 24px; height: 24px; }
+.success-inner h3 { font-size: 24px; font-weight: 800; color: var(--black); letter-spacing: -0.5px; margin-bottom: 10px; }
+.success-inner p { font-size: 14px; color: var(--grey-4); line-height: 1.7; font-weight: 400; }
+#wl-form { display: block; }
+footer {
+  padding: 24px 40px;
+  border-top: 1px solid var(--grey-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.footer-txt { font-size: 12px; color: var(--black); font-weight: 400; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+@media(max-width: 720px) {
+  nav { padding: 0 20px; }
+  footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
+  main { padding: 40px 20px; align-items: flex-start; }
+  .container { grid-template-columns: 1fr; gap: 40px; }
+  .left h1 { font-size: 34px; letter-spacing: -1.5px; }
+  .right { order: -1; }
+}
+</style>
+</head>
+<body>
 
+<nav>
+  <svg width="160" height="36" viewBox="0 0 160 36" xmlns="http://www.w3.org/2000/svg">
+    <rect width="36" height="36" rx="9" fill="#1A56FF"/>
+    <path d="M11 9 C9 9 7 10.5 6.5 12.5 C6 14.5 7 16 6.5 18 C6 20 5 21 5 23 C5 26 7 28.5 10 30 C12 31 14 31.5 16 31.5 C18 31.5 20 31 22 30 C24 28.5 26 26.5 26 24 C26 22 25 20.5 24.5 19 C24 17.5 24.5 16 24 14 C23.5 12 22 10.5 20.5 9.5 C19 8.5 18 8.5 16 8.5 C14 8.5 12.5 9 11 9Z" fill="white" opacity="0.15"/>
+    <line x1="18" y1="28" x2="18" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="13,17 18,11 23,17" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="18" cy="28" r="2.5" fill="white"/>
+    <text x="46" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="800" fill="#080808" letter-spacing="-0.5">AfriLaunch</text>
+    <text x="47" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" fill="#A0A09C" letter-spacing="1.5">INVEST IN AFRICA</text>
+  </svg>
+  <div class="nav-badge">
+    <div class="blink"></div>
+    Coming Soon
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div class="left">
+      <h1>What if anyone<br>could <span class="blue">invest in</span><br><span class="green">startups?</span></h1>
+
+      <p class="desc-1">In the West, ordinary people invest in startups every day and build real wealth doing it. In Africa, that door has always been closed — reserved for the connected and the wealthy. <strong>AfriLaunch is changing that.</strong></p>
+
+      <p class="desc-2">We are building Africa's first platform where anyone can back early stage startups solving real problems on the continent — and own a piece of what they build. The barrier to entry is lower than anything that has existed here before.</p>
+
+      <div class="points">
+        <div class="point"><div class="point-num">01</div>Back African startups before they blow up</div>
+        <div class="point"><div class="point-num">02</div>Starting in Lagos — expanding across Africa</div>
+        <div class="point"><div class="point-num">03</div>Startups are already lined up and waiting to list</div>
+        <div class="point"><div class="point-num">04</div>Waitlist members get first access — no exceptions</div>
+        <div class="point"><div class="point-num">05</div>Full details dropping soon — be inside when they do</div>
+      </div>
+
+      <div class="counter-strip">
+        <div class="blink" style="width:8px;height:8px;flex-shrink:0;"></div>
+        <div class="counter-txt"><strong id="signup-count">—</strong> people already on the waitlist</div>
+      </div>
+    </div>
+
+    <div class="right">
+
+      <div id="already-box">
+        <div class="already-inner">
+          <h3>You're already on the list.</h3>
+          <p id="already-msg">We'll reach you when AfriLaunch goes live.</p>
+        </div>
+      </div>
+
+      <div id="wl-form">
+        <div class="form-title">Join the Waitlist</div>
+        <div class="form-sub">Get early access before we open to the public.</div>
+
+        <div class="form-stack">
+          <div class="input-wrap">
+            <div class="input-label">Full Name</div>
+            <input class="wl-input" id="wl-name" type="text" placeholder="Your name" autocomplete="off" maxlength="80">
+            <div class="error-msg" id="name-error">Please enter a valid name.</div>
+          </div>
+
+          <div class="input-wrap">
+            <div class="input-label">Email Address</div>
+            <input class="wl-input" id="wl-email" type="email" placeholder="Your email address" autocomplete="off" maxlength="120">
+            <div class="error-msg" id="email-error">Please enter a valid email address.</div>
+          </div>
+
+          <div class="input-wrap">
+            <div class="input-label">I am joining as</div>
+            <div class="role-grid">
+              <div class="role-pill active" id="role-investor" onclick="selectRole('investor')">An Investor</div>
+              <div class="role-pill" id="role-startup" onclick="selectRole('startup')">A Startup</div>
+            </div>
+          </div>
+
+          <button class="btn-submit" id="submit-btn" onclick="joinWaitlist()">Secure My Spot →</button>
+          <p class="form-note">No spam. No fees. Just early access.</p>
+        </div>
+      </div>
+
+      <div id="wl-success">
+        <div class="success-inner">
+          <div class="success-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0EA55A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <h3>You're on the list.</h3>
+          <p id="wl-success-msg">We'll reach you when AfriLaunch goes live. You'll be first in.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-txt">© 2026 AfriLaunch · Lagos, Nigeria 🇳🇬</div>
+  <div class="footer-txt">Africa's first equity crowdfunding platform.</div>
+</footer>
+
+<script>
+  var SUPABASE_URL = 'https://lufugqgxahitottqalii.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1ZnVncWd4YWhpdG90dHFhbGlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMDQ0NzgsImV4cCI6MjA4OTU4MDQ3OH0.727ED8a2aWVKFJ3ZWANUVRxYB5aIt_9X9VvW0UbPlIQ';
+  var STORAGE_KEY = 'afrilaunch_wl';
+  var EMAIL_REGEX = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+  var NAME_REGEX = /^[a-zA-Z\s'\-]+$/;
+  var selectedRole = 'investor';
+
+  // Supabase REST helper
+  function sbFetch(path, method, body) {
+    return fetch(SUPABASE_URL + '/rest/v1/' + path, {
+      method: method || 'GET',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': method === 'POST' ? 'return=minimal' : ''
+      },
+      body: body ? JSON.stringify(body) : undefined
+    });
+  }
+
+  // Load signup count from Supabase
+  function loadCount() {
+    fetch(SUPABASE_URL + '/rest/v1/waitlist?select=id', {
+      method: 'GET',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var count = Array.isArray(data) ? data.length : 0;
+      document.getElementById('signup-count').textContent = count;
+    })
+    .catch(function() {
+      document.getElementById('signup-count').textContent = '0';
+    });
+  }
+
+  // Check if email already exists in Supabase globally
+  function checkEmailExists(email, callback) {
+    sbFetch('waitlist?email=eq.' + encodeURIComponent(email) + '&select=id', 'GET')
+      .then(function(r) { return r.json(); })
+      .then(function(data) { callback(Array.isArray(data) && data.length > 0); })
+      .catch(function() { callback(false); });
+  }
+
+  // Insert into Supabase
+  function insertSignup(name, email, role) {
+    return sbFetch('waitlist', 'POST', { name: name, email: email, role: role });
+  }
+
+  // ON LOAD
+  window.addEventListener('load', function() {
+    loadCount();
+    var list = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    if (list.length > 0) {
+      showAlready(list[0].name);
+    }
+  });
+
+  function showAlready(name) {
+    document.getElementById('wl-form').style.display = 'none';
+    document.getElementById('wl-success').style.display = 'none';
+    document.getElementById('already-msg').textContent = "You're already on the list" + (name ? ', ' + name : '') + ". We'll reach you when we launch.";
+    document.getElementById('already-box').style.display = 'block';
+  }
+
+  function selectRole(role) {
+    selectedRole = role;
+    document.getElementById('role-investor').classList.toggle('active', role === 'investor');
+    document.getElementById('role-startup').classList.toggle('active', role === 'startup');
+  }
+
+  function clearErrors() {
+    document.getElementById('wl-name').classList.remove('error');
+    document.getElementById('wl-email').classList.remove('error');
+    document.getElementById('name-error').classList.remove('show');
+    document.getElementById('email-error').classList.remove('show');
+  }
+
+  function showError(fieldId, msgId, msg) {
+    if (msg) document.getElementById(msgId).textContent = msg;
+    document.getElementById(fieldId).classList.add('error');
+    document.getElementById(msgId).classList.add('show');
+    document.getElementById(fieldId).focus();
+  }
+
+  function joinWaitlist() {
+    clearErrors();
+
+    var nameEl = document.getElementById('wl-name');
+    var emailEl = document.getElementById('wl-email');
+    var name = nameEl.value.trim();
+    var email = emailEl.value.trim().toLowerCase();
+
+    // Presence — name
+    if (!name) { showError('wl-name', 'name-error', 'Name cannot be empty.'); return; }
+
+    // Type check — letters only
+    if (!NAME_REGEX.test(name)) {
+      nameEl.value = '';
+      showError('wl-name', 'name-error', 'Name must contain letters only — no numbers or symbols.');
+      return;
+    }
+
+    // Presence — email
+    if (!email) { showError('wl-email', 'email-error', 'Email cannot be empty.'); return; }
+
+    // Format — email
+    if (!EMAIL_REGEX.test(email)) {
+      emailEl.value = '';
+      showError('wl-email', 'email-error', 'Please enter a valid email — e.g. name@gmail.com');
+      return;
+    }
+
+    // Device-level duplicate check
+    var list = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    if (list.find(function(e) { return e.email === email; })) {
+      emailEl.value = '';
+      showError('wl-email', 'email-error', 'This email is already registered.');
+      return;
+    }
+
+    // Lock button
+    var btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    // Global duplicate check via Supabase
+    checkEmailExists(email, function(exists) {
+      if (exists) {
+        btn.disabled = false;
+        btn.textContent = 'Secure My Spot →';
+        emailEl.value = '';
+        showError('wl-email', 'email-error', 'This email is already on the waitlist.');
+        return;
+      }
+
+      // Insert into Supabase
+      insertSignup(name, email, selectedRole)
+        .then(function(res) {
+          if (res.ok) {
+            console.log('Supabase: saved ✅');
+            loadCount();
+          } else {
+            res.json().then(function(e) { console.error('Supabase error:', e); });
+            loadCount();
+          }
+        })
+        .catch(function(err) {
+          console.error('Supabase fetch error:', err);
+          loadCount();
+        });
+
+      // Send to Web3Forms
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: '2dba82f4-a4b0-40ec-b4d3-78f29cfe422b',
+          subject: 'New AfriLaunch Waitlist Signup!',
+          from_name: 'AfriLaunch Waitlist',
+          name: name,
+          email: email,
+          role: selectedRole,
+          message: name + ' joined as a ' + selectedRole + ' with email: ' + email
+        })
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(d) { console.log('Web3Forms:', d.success ? 'sent ✅' : 'failed ❌'); })
+      .catch(function(err) { console.error('Web3Forms error:', err); });
+
+      // Save to localStorage
+      list.push({ name: name, email: email, role: selectedRole, ts: Date.now() });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+
+      // Increment counter immediately on screen
+      var countEl = document.getElementById('signup-count');
+      var current = parseInt(countEl.textContent) || 0;
+      countEl.textContent = current + 1;
+
+      // Show success
+      document.getElementById('wl-form').style.display = 'none';
+      document.getElementById('wl-success-msg').textContent = "You're on the list, " + name + ". We'll reach you when AfriLaunch goes live.";
+      document.getElementById('wl-success').style.display = 'block';
+    });
+  }
+</script>
+</body>
+</html>
